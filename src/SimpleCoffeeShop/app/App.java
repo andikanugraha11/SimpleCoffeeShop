@@ -1,19 +1,19 @@
 package SimpleCoffeeShop.app;
 
-import SimpleCoffeeShop.model.Buku;
-import SimpleCoffeeShop.service.BukuService;
-import SimpleCoffeeShop.view.BukuView;
+import SimpleCoffeeShop.model.Coffee;
+import SimpleCoffeeShop.view.CoffeeView;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import SimpleCoffeeShop.service.CoffeeService;
 
 public class App {
     private static ApplicationContext applicationContext;
     public static void main(String[] args){
         applicationContext= new ClassPathXmlApplicationContext("spring-configuration.xml");
-        new BukuView().setVisible(true);
+        new CoffeeView().setVisible(true);
     }
     
-    public static BukuService getBukuService(){
-        return (BukuService) applicationContext.getBean("BukuService");
+    public static CoffeeService getBukuService(){
+        return (CoffeeService) applicationContext.getBean("BukuService");
     }
 }

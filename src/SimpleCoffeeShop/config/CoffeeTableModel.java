@@ -2,21 +2,18 @@
 package SimpleCoffeeShop.config;
 
 
-import SimpleCoffeeShop.model.Buku;
+import SimpleCoffeeShop.model.Coffee;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
-/**
- *
- * @author adrianfaisal
- */
+
 public class CoffeeTableModel extends AbstractTableModel{
 
-    private List<Buku> daftarBuku = new ArrayList<>();
+    private List<Coffee> daftarBuku = new ArrayList<>();
     private final String HEADER[] = {"Order Id", "Customer", "Order", "Style","Price"};
     
-    public CoffeeTableModel(List<Buku> daftarBuku){
+    public CoffeeTableModel(List<Coffee> daftarBuku){
         this.daftarBuku = daftarBuku;
     }
     
@@ -37,7 +34,7 @@ public class CoffeeTableModel extends AbstractTableModel{
     
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Buku buku = daftarBuku.get(rowIndex);
+        Coffee buku = daftarBuku.get(rowIndex);
         
         switch(columnIndex) {
             case 0:

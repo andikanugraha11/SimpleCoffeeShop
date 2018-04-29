@@ -5,12 +5,12 @@
  */
 package SimpleCoffeeShop.service;
 
-import SimpleCoffeeShop.dao.BukuDao;
-import SimpleCoffeeShop.model.Buku;
+import SimpleCoffeeShop.model.Coffee;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import SimpleCoffeeShop.dao.CoffeeDao;
 
 /**
  *
@@ -18,29 +18,29 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service("BukuService")
 @Transactional(readOnly = true)
-public class BukuServiceImpl implements BukuService{
+public class CoffeeServiceImpl implements CoffeeService{
     @Autowired
-    private BukuDao bukuDao;
+    private CoffeeDao bukuDao;
 
     @Override
     @Transactional
-    public void saveBuku(Buku buku) {
+    public void saveBuku(Coffee buku) {
         bukuDao.saveBuku(buku);
     }
 
     @Override
-    public List<Buku> getDaftarBuku() {
+    public List<Coffee> getDaftarBuku() {
         return bukuDao.getDaftarBuku();
     }
 
     @Override
     @Transactional
-    public void updateBuku(Buku buku) {
+    public void updateBuku(Coffee buku) {
         bukuDao.updateBuku(buku);
     }
 
     @Override
-    public void deleteBuku(Buku buku) {
+    public void deleteBuku(Coffee buku) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
