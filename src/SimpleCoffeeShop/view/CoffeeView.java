@@ -5,7 +5,7 @@
  */
 package SimpleCoffeeShop.view;
 
-import SimpleCoffeeShop.controller.BukuController;
+import SimpleCoffeeShop.controller.CoffeeController;
 import javax.swing.ButtonGroup;
 
 
@@ -13,8 +13,8 @@ import javax.swing.ButtonGroup;
  *
  * @author p14055
  */
-public class BukuView extends javax.swing.JFrame {
-    private final BukuController bukuController = new BukuController(this);
+public class CoffeeView extends javax.swing.JFrame {
+    private final CoffeeController bukuController = new CoffeeController(this);
     public String orderMenu;
     public String styleTxt = "HOT";
     public int pilihan = 0;
@@ -52,7 +52,7 @@ public class BukuView extends javax.swing.JFrame {
     /**
      * Creates new form BukuView
      */
-    public BukuView() {
+    public CoffeeView() {
         initComponents();
         groupButton();
         jRadioButton2.setSelected(true);
@@ -167,7 +167,6 @@ public class BukuView extends javax.swing.JFrame {
 
         jLabel4.setText("Our Menu");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("E:\\Skripshit\\SimpleCoffeeShop\\coffee-code.png")); // NOI18N
         jLabel5.setToolTipText("");
         jLabel5.setAlignmentX(0.1F);
         jLabel5.setAlignmentY(0.1F);
@@ -367,20 +366,21 @@ public class BukuView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BukuView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CoffeeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BukuView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CoffeeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BukuView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CoffeeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BukuView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CoffeeView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BukuView().setVisible(true);
+                new CoffeeView().setVisible(true);
             }
         });
     }

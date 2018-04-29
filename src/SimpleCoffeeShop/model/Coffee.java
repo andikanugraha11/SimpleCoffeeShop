@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "tbl_order")
-public class Buku implements Serializable{
+public class Coffee implements Serializable{
     
     
     @Column(name = "orderId", length = 13)
@@ -20,8 +20,8 @@ public class Buku implements Serializable{
     @Column(name = "customer", length = 50)
     private String customer; 
     
-    @Column(name = "order", length = 50)
-    private String order; 
+    @Column(name = "orderItem", length = 50)
+    private String orderItem; 
     
     @Column(name = "style", length = 35)
     private String style;
@@ -58,17 +58,17 @@ public class Buku implements Serializable{
     }
 
     /**
-     * @return the order
+     * @return the orderItem
      */
     public String getOrder() {
-        return order;
+        return orderItem;
     }
 
     /**
-     * @param order the order to set
+     * @param order the orderItem to set
      */
     public void setOrder(String order) {
-        this.order = order;
+        this.orderItem = order;
     }
 
     /**

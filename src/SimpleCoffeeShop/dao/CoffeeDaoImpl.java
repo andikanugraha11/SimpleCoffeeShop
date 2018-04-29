@@ -1,35 +1,35 @@
 
 package SimpleCoffeeShop.dao;
 
-import SimpleCoffeeShop.model.Buku;
+import SimpleCoffeeShop.model.Coffee;
 import java.util.List;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class BukuDaoImpl implements BukuDao {
+public class CoffeeDaoImpl implements CoffeeDao {
     @Autowired
     private SessionFactory sessionFactory;
 
     @Override
-    public void saveBuku(Buku buku) {
+    public void saveBuku(Coffee buku) {
         sessionFactory.getCurrentSession().save(buku);
     }
 
     @Override
-    public List<Buku> getDaftarBuku() {
-        return sessionFactory.getCurrentSession().createCriteria(Buku.class).list();
+    public List<Coffee> getDaftarBuku() {
+        return sessionFactory.getCurrentSession().createCriteria(Coffee.class).list();
     }
 
     @Override
-    public void updateBuku(Buku buku) {
+    public void updateBuku(Coffee buku) {
         sessionFactory.getCurrentSession().update(buku);
         
     }
 
     @Override
-    public void deleteBuku(Buku buku) {
+    public void deleteBuku(Coffee buku) {
         sessionFactory.getCurrentSession().delete(buku);
     }
     

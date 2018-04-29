@@ -5,17 +5,17 @@
  */
 package SimpleCoffeeShop.service;
 
-import SimpleCoffeeShop.model.Buku;
+import SimpleCoffeeShop.model.Coffee;
 import java.util.List;
 
 /**
  *
  * @author p14055
  */
-public interface BukuService {
-    public void saveBuku(Buku buku);
-    public List<Buku> getDaftarBuku();
-    public void deleteBuku(Buku buku);
-    public void updateBuku(Buku buku);
+public interface CoffeeService {
+    public void saveBuku(Coffee buku);
+    public List<Coffee> getDaftarBuku();
+    public void deleteBuku(Coffee buku);
+    public void updateBuku(Coffee buku);
     
 }

@@ -7,22 +7,22 @@ package SimpleCoffeeShop.controller;
 
 import SimpleCoffeeShop.app.App;
 import SimpleCoffeeShop.config.CoffeeTableModel;
-import SimpleCoffeeShop.dao.BukuDao;
-import SimpleCoffeeShop.model.Buku;
-import SimpleCoffeeShop.view.BukuView;
+import SimpleCoffeeShop.model.Coffee;
+import SimpleCoffeeShop.view.CoffeeView;
 import java.util.List;
 import javax.swing.JOptionPane;
+import SimpleCoffeeShop.dao.CoffeeDao;
 
 /**
  *
  * @author p14055
  */
-public class BukuController {
-    private final BukuView bukuView;
+public class CoffeeController {
+    private final CoffeeView bukuView;
     private CoffeeTableModel bukuTableModel;
-    private List<Buku> daftarBuku;
+    private List<Coffee> daftarBuku;
     
-    public BukuController(BukuView bukuView){
+    public CoffeeController(CoffeeView bukuView){
         this.bukuView = bukuView;
     }
     
@@ -35,7 +35,7 @@ public class BukuController {
     }
     
     public void simpanBuku(){
-        Buku buku = new Buku();
+        Coffee buku = new Coffee();
         
         buku.setOrderId(this.bukuView.getTxtOrderId().getText());
         buku.setCustomer(this.bukuView.getTxtCustomer().getText());
@@ -50,7 +50,7 @@ public class BukuController {
         tampilData();
     }
     public void updateBuku(){
-        Buku buku = new Buku();
+        Coffee buku = new Coffee();
         
         buku.setOrderId(this.bukuView.getTxtOrderId().getText());
         buku.setCustomer(this.bukuView.getTxtCustomer().getText());
